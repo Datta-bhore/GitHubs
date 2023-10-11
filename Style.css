@@ -1,0 +1,16 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: green;
+    height: 100vh;
+}
+
+.login-form{
+    width: 600px;
+    background-color: #ffffff;
+}

@@ -1,0 +1,75 @@
+<!-- <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="input-field">
+            <label for="state">state</label>
+        <select name="state" id="state" onchange="myForm(this.id,'dist')">
+            <option value="">choose state</option>
+            <option value="maharashtra">maharashtra</option>
+            <option value="karnataka">karnataka</option>
+            <option value="bangalore">bangalore</option>
+        </select> 
+        </div><br> <br>
+
+        <div class="input-field">
+            <label for="dist">dist</label>
+            <select name="dist" id="dist">
+                
+            </select>
+        </div>
+
+        <script>
+            function myForm(s1,s2)
+            {
+                var s1 = document.getElementById(s1);
+                var s2 = document.getElementById(s2);
+                s2.innerHTML = "";
+                if(s1.value == "maharashtra")
+                {
+                    var optionarray = ['dharashiv|Dharashiv','beed|Beed','solapur|Solapur','latur|Latur'];
+                }
+                else if(s2.value == "karnataka")
+                {
+                    var optionarray = ['xyz|Xyz','abc|Abc','bmw|Bmw'];
+                }
+                for(var option in optionarray)
+                {
+                    var pair = optionarray[option].split("|");
+                    var newoption = document.createElement("option");
+
+                    newoption.value = pair[0];
+                    newoption.innerHTML= pair[1];
+                    s2.options.add(newoption);
+                }
+            }
+        </script>
+
+    </body>
+</html> -->
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="input-field">
+            <select name="state" id="state" onchange="myForm()">
+                <option value="">choose State</option>
+                <option value="maharashtra">maharashtra</option>
+                <option value="karnataka">karnataka</option>
+                <option value="bangalore">bangalore</option>
+            </select> 
+        </div> <br> <br>
+        <p>JavaScript Form Validation. HTML form validation can be done by JavaScript. If a form field (fname) is empty, this function alerts a message, and returns ...</p>
+
+        <p id="demo"></p>
+        <script>
+            function myForm()
+            {
+                var x = document.getElementById('state').value;
+                console.log(x);
+            }
+        </script>
+    </body>
+</html>

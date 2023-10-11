@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./Stylestud.css">
+    </head>
+    <body>
+        <div class="parent d-flex ">
+            <div class="login-form d-flex mt-5 m-auto align-items-center justify-content-center ">
+        <div class="container">
+            <div class="row">
+                <form>
+                <div class="col-md-12">
+                    <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Enter Id" id="sid" name="sid" onkeydown="studentRegs()" > 
+                    <p class="error" id="idError"></p>
+                    </div> <br>
+                    <div class="input-field">
+                    <input type="text" class="form-control" placeholder="First Name" id="fname" name="fname" onkeydown="studentRegs()"> 
+                    <p class="error" id="fnameError"></p>
+                </div> <br> 
+                <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Middle Name" id="mname" name="mname" onkeydown="studentRegs()">
+                    <p class="error" id="mnameError"></p> 
+                </div> <br>
+                <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lname" onkeydown="studentRegs()">
+                    <p class="error" id="lnameError"></p> 
+                </div> <br>
+                 
+                <div class="input-field">
+                    <input type="email" class="form-control" placeholder="Enter Mail" id="mail" name="mail" onkeydown="studentRegs()"> 
+                    <p class="error" id="mailError"></p>
+                </div> <br>
+                <div class="input-field">
+                    <textarea name="address" id="address" cols="40" rows="3" placeholder="Enter Address" onkeydown="studentRegs()"></textarea>
+                    <p class="error" id="addressError"></p> 
+                </div> <br> 
+                <div class="input-field">
+                    <select name="state" id="state" class="form-control" >
+                        <option value="">Choose State</option>
+                        <option value="maharashtra">maharashtra</option>
+                        <option value="bangalore">bangalore</option>
+                        <option value="karnataka">karnataka</option>
+                        <option value="aasam">aasam</option>
+                    </select> 
+                    <p class="error" id="stateError"></p>
+                    </div> <br> 
+                    <div class="input-field">
+                    <select name="dist" id="dist" class="form-control">
+                        <option value="">Choose District</option>
+                        <option value="pune">pune</option>
+        
+                        <option value="dharashiv">dharashiv</option>
+                        <option value="beed">beed</option>
+                        <option value="latur">latur</option>
+                        <option value="solapur">solapur</option>
+                        <option value="vashim">vashim</option>
+                        <option value="chhatrapati sambhajinagar">chhatrapati sambhajinagar</option>
+                    </select> 
+                    <p class="error" id="distError"></p>
+                    </div> <br> 
+                    <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Enter City" id="city" name="city" onkeydown="studentRegs()">
+                    <p class="error" id="cityError"></p>
+                        </div> <br>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Enter Pincode" id="pin" name="pin" onkeydown="studentRegs()">
+                            <p class="error" id="pinError"></p>
+                        </div> <br>
+                        <button type="submit" class="btn btn-primary form-control" onclick="return studentRegs()">submit</button>
+                </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script type="text/javascript">
+            function studentRegs()
+            {
+                var id, fname, mname, lname, mail, address, state, dist, city, pin, ids, fnames, mnames, lnames, mails, addresss, states, dists, citys, pins,z;
+                id = document.getElementById("sid");
+                fname = document.getElementById("fname");
+                mname =document.getElementById("mname");
+                lname =document.getElementById("lname");
+                mail=document.getElementById("mail");
+                address=document.getElementById("address");
+                state=document.getElementById("state");
+                dist=document.getElementById("dist");
+                city=document.getElementById("city");
+                pin=document.getElementById("pin");
+
+                ids=document.getElementById("idError");
+                fnames=document.getElementById("fnameError");
+                mnames=document.getElementById("mnameError");
+                lnames=document.getElementById("lnameError");
+                mails=document.getElementById("mailError");
+                addresss=document.getElementById("addressError");
+                states=document.getElementById("stateError");
+                dists=document.getElementById("distError");
+                citys=document.getElementById("cityError");
+                pins=document.getElementById("pinError");
+
+                if(id.value == "")
+                {
+                    ids.innerHTML="Enter Id **";
+                }
+                else
+                {
+                    ids.innerHTML="";
+                }
+                if(fname.value == "")
+                {
+                    fnames.innerHTML="Enter First Name **";
+                }
+                else{
+                    fnames.innerHTML="";
+                }
+                if(mname.value == "")
+                {
+                    mnames.innerHTML="Enter Middle Name **";
+                }
+                else{
+                    mnames.innerHTML="";
+                }
+                if(lname.value == "")
+                {
+                    lnames.innerHTML="Enter Last Name **";
+                }
+                else{
+                    lnames.innerHTML="";
+                }
+                if(mail.value == "")
+                {
+                    mails.innerHTML="Enter Mail **";
+                }
+                else
+                {
+                    mails.innerHTML="";
+                }
+                if(address.value == "")
+                {
+                    addresss.innerHTML="Enter Address **";
+                }
+                else{
+                    addresss.innerHTML="";
+                }
+                if(state.value == "")
+                {
+                    states.innerHTML="Enter State **";  
+                }
+                else{
+                    states.innerHTML="";
+                }
+                if(dist.value == "")
+                {
+                    dists.innerHTML="Enter Dist **";
+                }
+                else{
+                    dists.innerHTML="";
+                }
+                if(city.value == "")
+                {
+                    citys.innerHTML="Enter City **";
+                }
+                else
+                {
+                    citys.innerHTML="";
+                }
+                if(pin.value == "")
+                {
+                    pins.innerHTML="Enter Pincode **";
+                }
+                else{
+                    pins.innerHTML="";
+                }
+                if((id.value == "") || (fname.value == "") || (mname.value == "") || (lname.value == "") || (mail.value == "") || (address.value == "") || (state.value == "") || (dist.value == "") || (city.value == "") || (pin.value == ""))
+                {
+                    z=false;
+                }
+                else{
+                    z=true;
+                }
+                return z;
+
+            }
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
+</html>

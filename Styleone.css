@@ -1,0 +1,33 @@
+ .container{
+    border: 5px solid pink;
+}
+.yellow{
+    background: yellow;
+}
+.pink{
+    background: pink;
+}
+.darkblue{
+    background: darkblue;
+}
+
+.row{
+    
+    border: 10px solid green;
+}
+/*.box-1{
+    min-height: 200px;
+    background: red;
+}
+.box-2{
+    min-height: 200px;
+    background: gray;
+}
+.box-3{
+    min-height: 200px;
+    background: gold;
+}
+.box-4{
+    min-height: 200px;
+    background: blue;
+} */
